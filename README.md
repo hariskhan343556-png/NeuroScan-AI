@@ -136,7 +136,7 @@ brain-tumor-mri-classifier/
 
 ### 1. Clone & Switch to Feature Branch
 ```bash
-git clone https://github.com/atleekumaar/brain-tumor-mri-classifier.git
+git clone https://github.com/
 cd brain-tumor-mri-classifier
 git checkout feature/tumor-segmentation
 ```
