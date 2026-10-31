@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — 3D Brain Tumor Segmentation Router & FastAPI Endpoints
+NeuroNova AI — 3D Brain Tumor Segmentation Router & FastAPI Endpoints
 Provides strictly validated research endpoints for volumetric NIfTI inference,
 slice preview streaming, 3D surface mesh extraction, and quantitative metrics.
 """
@@ -38,7 +38,7 @@ from backend.segmentation.sample_data import create_benchmark_sample_suite
 router = APIRouter(prefix="/api/segmentation", tags=["Tumor Segmentation"])
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-SEG_MODEL_PATH = BASE_DIR / "models" / "NeuroScan_Seg3D_UNet.pth"
+SEG_MODEL_PATH = BASE_DIR / "models" / "NeuroNova_Seg3D_UNet.pth"
 TEMP_UPLOAD_DIR = BASE_DIR / "uploads" / "segmentation_temp"
 TEMP_UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 SAMPLE_DATA_DIR = BASE_DIR / "backend" / "segmentation" / "data"
@@ -94,7 +94,7 @@ async def get_segmentation_status():
         "status_message": (
             "3D U-Net weights loaded and ready for volumetric inference."
             if is_seg_model_loaded
-            else "Segmentation architecture and data pipeline are operational. A trained checkpoint (NeuroScan_Seg3D_UNet.pth) must be placed in models/ before inference can be executed."
+            else "Segmentation architecture and data pipeline are operational. A trained checkpoint (NeuroNova_Seg3D_UNet.pth) must be placed in models/ before inference can be executed."
         )
     }
 
@@ -105,7 +105,7 @@ async def get_segmentation_metadata():
     Returns research technical metadata, citation guidelines, and label schemas.
     """
     return {
-        "workstation": "NEUROSCAN AI 3D Segmentation Lab",
+        "workstation": "NeuroNova AI 3D Segmentation Lab",
         "version": "2.0-research",
         "intended_use": "Investigational and educational research only. Not for clinical diagnosis or treatment planning.",
         "benchmark_dataset": "Brain Tumor Segmentation (BraTS) Multi-Modal Protocol",
@@ -282,7 +282,7 @@ async def predict_segmentation(
                     content={
                         "status": "checkpoint_unavailable",
                         "error": "Segmentation model checkpoint is not loaded.",
-                        "detail": "The 3D U-Net pipeline is operational, but inference cannot be performed without trained weights. Place NeuroScan_Seg3D_UNet.pth in the models/ directory.",
+                        "detail": "The 3D U-Net pipeline is operational, but inference cannot be performed without trained weights. Place NeuroNova_Seg3D_UNet.pth in the models/ directory.",
                         "volume_geometry": {
                             "dimensions": list(mri_vol.shape),
                             "voxel_spacing_mm": list(mri_vol.voxel_spacing),

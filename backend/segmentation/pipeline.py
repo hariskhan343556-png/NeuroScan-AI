@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — NIfTI Processing, Spatial Alignment & Inference Pipeline
+NEURONOVA AI — NIfTI Processing, Spatial Alignment & Inference Pipeline
 Handles .nii/.nii.gz volumes, non-zero intensity normalization,
 patch-based sliding window inference, and multi-planar slice generation.
 """

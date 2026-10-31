@@ -16,13 +16,13 @@ except ImportError:
     from backend.segmentation.router import router as segmentation_router
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_PATH = BASE_DIR / "models" / "NeuroScan_AI_model.pth"
+MODEL_PATH = BASE_DIR / "models" / "NeuroNova_AI_model.pth"
 FRONTEND_DIR = BASE_DIR / "frontend"
 UPLOAD_DIR = BASE_DIR / "uploads"
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI(
-    title="NEUROSCAN AI — Brain Tumor Classifier & 3D Segmentation API",
+    title="NEURONOVA AI — Brain Tumor Classifier & 3D Segmentation API",
     description="Research-grade radiology AI platform for 2D MRI classification and 3D volumetric tumor segmentation."
 )
 

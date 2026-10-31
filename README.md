@@ -1,8 +1,8 @@
-# NEUROSCAN AI — Brain Tumor MRI Classification & 3D Segmentation Workstation
+# NEURONOVA AI — Brain Tumor MRI Classification & 3D Segmentation Workstation
 
 [
 
-**NEUROSCAN AI** is a research-grade clinical AI radiology workstation designed for neuro-oncology investigation, educational evaluation, and surgical planning research.
+**NEURONOVA AI** is a research-grade clinical AI radiology workstation designed for neuro-oncology investigation, educational evaluation, and surgical planning research.
 
 This milestone represents the transition in our engineering roadmap:
 $$\text{MRI Classification} \longrightarrow \mathbf{\text{Tumor Segmentation}} \longrightarrow \text{3D MRI Analysis} \longrightarrow \text{Multimodal Medical AI}$$
@@ -112,8 +112,8 @@ brain-tumor-mri-classifier/
 │       └── samples/                    # 2D clinical MRI benchmarks
 ├── models/
 │   ├── README.md                       # Model weights directory instructions
-│   ├── NeuroScan_AI_model.pth          # 2D CNN classification weights
-│   └── NeuroScan_Seg3D_UNet.pth        # 3D U-Net segmentation weights (57.8 MB)
+│   ├── NeuroNova_AI_model.pth          # 2D CNN classification weights
+│   └── NeuroNova_Seg3D_UNet.pth        # 3D U-Net segmentation weights (57.8 MB)
 ├── scripts/
 │   ├── prepare_samples.py              # Generates authentic benchmark NIfTI test suite
 │   └── train_baseline.py               # Reproducible training runner
@@ -177,7 +177,7 @@ The five existing 2D MRI sample scans in `frontend/assets/samples/` (`glioma.jpg
 ### 5. Train or Verify Model Checkpoint
 To run supervised patch-based 3D U-Net training with mixed-precision (AMP) and patient-level splitting:
 ```bash
-python -m backend.segmentation.train --data_dir backend/segmentation/data --output models/NeuroScan_Seg3D_UNet.pth --epochs 10 --batch_size 2
+python -m backend.segmentation.train --data_dir backend/segmentation/data --output models/NeuroNova_Seg3D_UNet.pth --epochs 10 --batch_size 2
 ```
 
 ### 5. Run the Automated Test Suite
@@ -185,7 +185,7 @@ python -m backend.segmentation.train --data_dir backend/segmentation/data --outp
 python -m pytest -v
 ```
 
-### 6. Start the NeuroScan AI Server
+### 6. Start the NeuroNova AI Server
 ```bash
 python run_server.py
 ```
@@ -223,7 +223,7 @@ Evaluation follows the official **BraTS Benchmark Protocol**:
    $$\text{IoU} = \frac{|P \cap G|}{|P \cup G|}$$
 3. **Multi-Case Evaluation Run:**
    ```bash
-   python -m backend.segmentation.evaluate --checkpoint models/NeuroScan_Seg3D_UNet.pth --test_dir backend/segmentation/data
+   python -m backend.segmentation.evaluate --checkpoint models/NeuroNova_Seg3D_UNet.pth --test_dir backend/segmentation/data
    ```
 
 ---
@@ -231,4 +231,4 @@ Evaluation follows the official **BraTS Benchmark Protocol**:
 ## ⚠️ Research Disclaimer
 
 > **IMPORTANT CLINICAL NOTICE:**
-> NEUROSCAN AI is developed exclusively for investigational research, academic demonstration, and educational purposes. It has not been cleared or approved by the FDA, EMA, or any national medical device regulatory body. It is **NOT** intended for clinical diagnosis, patient management, or surgical navigation. Any treatment decisions must be made by licensed healthcare professionals using certified medical devices and verified diagnostic imaging.
+> NEURONOVA AI is developed exclusively for investigational research, academic demonstration, and educational purposes. It has not been cleared or approved by the FDA, EMA, or any national medical device regulatory body. It is **NOT** intended for clinical diagnosis, patient management, or surgical navigation. Any treatment decisions must be made by licensed healthcare professionals using certified medical devices and verified diagnostic imaging.

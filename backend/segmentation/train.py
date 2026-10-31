@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — 3D Brain Tumor Segmentation Training Script
+NeuroNova AI — 3D Brain Tumor Segmentation Training Script
 Supports BraTS NIfTI datasets with patient-level deterministic splitting,
 Dice + Cross-Entropy loss, mixed-precision (AMP), and checkpoint persistence.
 """
@@ -297,9 +297,9 @@ def train_segmentation_model(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Train NeuroScan 3D Brain Tumor Segmentation Model")
+    parser = argparse.ArgumentParser(description="Train NeuroNova 3D Brain Tumor Segmentation Model")
     parser.add_argument("--data_dir", type=str, required=True, help="Directory containing NIfTI volume pairs")
-    parser.add_argument("--output", type=str, default="models/NeuroScan_Seg3D_UNet.pth", help="Checkpoint output path")
+    parser.add_argument("--output", type=str, default="models/NeuroNova_Seg3D_UNet.pth", help="Checkpoint output path")
     parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs")
     parser.add_argument("--batch_size", type=int, default=2, help="Patch batch size")
     parser.add_argument("--lr", type=float, default=1e-4, help="Learning rate")

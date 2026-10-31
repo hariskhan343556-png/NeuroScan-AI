@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — Benchmark NIfTI Volume & Ground-Truth Generator
+NeuroNova AI — Benchmark NIfTI Volume & Ground-Truth Generator
 Creates reproducible, research-grade synthetic 3D Brain MRI NIfTI volumes
 with realistic multi-compartment brain geometry (cortex, white matter, ventricles)
 and BraTS-compliant ground-truth tumor annotations (NCR, ED, ET).

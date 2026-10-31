@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — 3D Segmentation Evaluation and Validation Script
+NEURONOVA AI — 3D Segmentation Evaluation and Validation Script
 Evaluates 3D U-Net checkpoints on multi-case NIfTI test sets, reporting
 per-case and aggregate Dice (WT, TC, ET), IoU, sensitivity, and volume agreement.
 """
@@ -48,7 +48,7 @@ def evaluate_dataset(
 
     case_results = []
     print(f"\n=======================================================")
-    print(f"NEUROSCAN AI — Volumetric Evaluation Benchmark")
+    print(f"NEURONOVA AI — Volumetric Evaluation Benchmark")
     print(f"Model Checkpoint: {checkpoint_path}")
     print(f"Device: {device} | Total Cases: {len(mri_files)}")
     print(f"=======================================================\n")
@@ -127,8 +127,8 @@ def evaluate_dataset(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Evaluate NeuroScan 3D Tumor Segmentation Model")
-    parser.add_argument("--checkpoint", type=str, default="models/NeuroScan_Seg3D_UNet.pth")
+    parser = argparse.ArgumentParser(description="Evaluate NeuroNova 3D Tumor Segmentation Model")
+    parser.add_argument("--checkpoint", type=str, default="models/NeuroNova_Seg3D_UNet.pth")
     parser.add_argument("--test_dir", type=str, required=True, help="Path to folder containing test NIfTI volumes")
     parser.add_argument("--output_json", type=str, default=None)
     args = parser.parse_args()

@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — 3D Surface Mesh Generator for Actual Voxel Segmentations
+NeuroNova AI — 3D Surface Mesh Generator for Actual Voxel Segmentations
 Extracts true volumetric isosurfaces from segmentation masks using Marching Cubes
 or boundary quad-triangulation, scaled by physical voxel spacing (dx, dy, dz).
 """

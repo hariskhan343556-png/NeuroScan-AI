@@ -11,7 +11,7 @@ from backend.segmentation.train import train_segmentation_model
 
 if __name__ == "__main__":
     data_dir = root_dir / "backend" / "segmentation" / "data"
-    output_ckpt = root_dir / "models" / "NeuroScan_Seg3D_UNet.pth"
+    output_ckpt = root_dir / "models" / "NeuroNova_Seg3D_UNet.pth"
     print(f"Training 3D U-Net on {data_dir} -> {output_ckpt}")
     result = train_segmentation_model(
         data_dir=str(data_dir),

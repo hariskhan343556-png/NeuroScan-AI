@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — 3D Brain Tumor Segmentation Evaluation Metrics
+NEURONOVA AI — 3D Brain Tumor Segmentation Evaluation Metrics
 Rigorously implements Dice coefficient, IoU, sensitivity, specificity,
 and volume agreement with explicit empty mask and edge-case handling.
 """

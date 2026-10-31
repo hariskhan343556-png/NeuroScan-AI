@@ -1,6 +1,6 @@
-# NEUROSCAN AI — Data Provenance & Verification Specification
+# NEURONNOVA AI — Data Provenance & Verification Specification
 
-This document provides a comprehensive audit trail of all medical imaging data, ground-truth annotations, and model checkpoints in **NEUROSCAN AI**.
+This document provides a comprehensive audit trail of all medical imaging data, ground-truth annotations, and model checkpoints in **NEURONOVA AI**.
 
 ---
 
@@ -53,7 +53,7 @@ Every downloaded study was subjected to spatial geometry and voxel alignment che
 
 To maintain research integrity and prevent medical AI misrepresentation:
 * **Expert Ground Truth (Gold Standard):** Ground truth masks are manual delineations produced by expert board-certified neuro-radiologists from the ASNR-MICCAI BraTS consortium. They are labeled as **Ground Truth (Expert)** across all 2D slices, volumetric tables, and 3D surface meshes.
-* **Model Prediction Checkpoint (`NeuroScan_Seg3D_UNet.pth`):**
+* **Model Prediction Checkpoint (`NeuroNova_Seg3D_UNet.pth`):**
   - Architecture: 3D U-Net (BraTS Benchmark, native PyTorch/MONAI)
   - Provenance: Initial baseline training (4 epochs, patch size $64 \times 64 \times 64$, initial validation Dice 0.2758)
   - Status: Marked as **Prediction (Experimental)** in the workstation interface.

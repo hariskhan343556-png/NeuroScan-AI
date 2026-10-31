@@ -1,5 +1,5 @@
 /**
- * NEUROSCAN AI — Production Clinical AI Workstation Controller
+ * NeuroNova AI — Production Clinical AI Workstation Controller
  * Advanced Medical AI & Radiology Imaging Interface
  */
 
@@ -253,15 +253,15 @@
     if (theme === "light") {
       document.documentElement.setAttribute("data-theme", "light");
       if (dom.themeLabel) dom.themeLabel.textContent = "Dark Mode";
-      localStorage.setItem("neuroscan_theme", "light");
+      localStorage.setItem("NeuroNova_theme", "light");
     } else {
       document.documentElement.removeAttribute("data-theme");
       if (dom.themeLabel) dom.themeLabel.textContent = "Light Mode";
-      localStorage.setItem("neuroscan_theme", "dark");
+      localStorage.setItem("NeuroNova_theme", "dark");
     }
   }
 
-  const initialTheme = localStorage.getItem("neuroscan_theme") || "dark";
+  const initialTheme = localStorage.getItem("NeuroNova_theme") || "dark";
   applyTheme(initialTheme);
 
   if (dom.themeToggleBtn) {
@@ -864,7 +864,7 @@
   // =========================================================================
   function loadInitialHistory() {
     // Clean old session storage containing dummy vector graphics
-    localStorage.removeItem("neuroscan_studies");
+    localStorage.removeItem("NeuroNova_studies");
 
     state.studiesHistory = [
       {
@@ -920,7 +920,7 @@
 
   function saveHistory() {
     try {
-      localStorage.setItem("neuroscan_studies", JSON.stringify(state.studiesHistory.slice(0, 30)));
+      localStorage.setItem("NeuroNova_studies", JSON.stringify(state.studiesHistory.slice(0, 30)));
     } catch (e) {}
     if (dom.overviewScanCount) dom.overviewScanCount.textContent = state.studiesHistory.length;
   }

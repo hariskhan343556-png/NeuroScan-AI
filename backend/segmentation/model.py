@@ -1,5 +1,5 @@
 """
-NEUROSCAN AI — 3D Brain Tumor Segmentation Model
+NeuroNova AI — 3D Brain Tumor Segmentation Model
 Research-grade 3D U-Net architecture built with PyTorch and MONAI.
 Supports multi-parametric MRI (T1, T1-CE, T2, FLAIR) and BraTS label hierarchies:
   - WT (Whole Tumor): Necrotic Core + Edema + Enhancing Tumor (Labels 1 + 2 + 4)
@@ -191,7 +191,7 @@ def load_segmentation_model(
     path = Path(checkpoint_path)
     if not path.exists():
         metadata = {
-            "model_name": "NeuroScan 3D U-Net (BraTS Architecture)",
+            "model_name": "NeuroNova 3D U-Net (BraTS Architecture)",
             "framework": "PyTorch / MONAI",
             "spatial_dims": 3,
             "in_channels": in_channels,
@@ -229,7 +229,7 @@ def load_segmentation_model(
         model.eval()
 
         metadata = {
-            "model_name": "NeuroScan 3D U-Net (BraTS Benchmark)",
+            "model_name": "NeuroNova 3D U-Net (BraTS Benchmark)",
             "framework": "PyTorch / MONAI",
             "spatial_dims": 3,
             "in_channels": in_channels,
@@ -243,7 +243,7 @@ def load_segmentation_model(
         return model, True, metadata
     except Exception as e:
         metadata = {
-            "model_name": "NeuroScan 3D U-Net",
+            "model_name": "NeuroNova 3D U-Net",
             "framework": "PyTorch / MONAI",
             "checkpoint_loaded": False,
             "checkpoint_path": str(path),
